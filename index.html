@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EMP-22 | Resume Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>EMP-22</h2>
+    </header>
+
+    <main>
+
+        <section class="hero">
+
+            <p class="tag">AI-POWERED RESUME ASSISTANT</p>
+
+            <h1>
+                Make Your Resume
+                <span>Stand Out.</span>
+            </h1>
+
+            <p class="description">
+                Improve your resume content with AI-powered,
+                job-specific suggestions — without inventing your experience.
+            </p>
+
+            <button id="startButton">
+                Analyze My Resume →
+            </button>
+
+        </section>
+
+        <section id="resumeSection" class="resume-section">
+
+            <h2>Analyze Your Resume</h2>
+
+            <p>Paste your resume content below.</p>
+
+            <textarea
+                id="resume"
+                placeholder="Paste your resume here...">
+            </textarea>
+
+            <label for="role">Target Job Role</label>
+
+            <select id="role">
+                <option>Software Developer</option>
+                <option>Data Analyst</option>
+                <option>Web Developer</option>
+                <option>Machine Learning Engineer</option>
+            </select>
+
+            <label for="jobDescription">
+                Job Description (Optional)
+            </label>
+
+            <textarea
+                id="jobDescription"
+                placeholder="Paste the job description here...">
+            </textarea>
+
+            <button id="analyzeButton">
+                Analyze Resume
+            </button>
+
+            <div id="result"></div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
