@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify,send_from_directory
 from flask_cors import CORS
 from dotenv import load_dotenv
 from openai import OpenAI
@@ -14,9 +14,15 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 @app.route("/")
 def home():
-    return jsonify({
-        "message": "EMP-22 Backend is working!"
-    })
+    return send_from_directory(".", "index.html")
+
+@app.route("/style.css")
+def style():
+    return send_from_directory(".", "style.css")
+
+@app.route("/script.js")
+def script():
+    return send_from_directory(".", "script.js")
 
 
 @app.route("/analyze", methods=["POST"])
